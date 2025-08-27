@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='Shared' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sets>
+<Attr>
+<Pos l='10' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='PLAYERS' typref='4'>
+<Attr>
+<Pos l='11' c='5' s='7'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='Player_1' typref='5'>
+<Attr>
+<Pos l='11' c='17' s='8'/>
+</Attr>
+</Id>
+<Id value='Player_2' typref='5'>
+<Attr>
+<Pos l='11' c='27' s='8'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='MESSAGE' typref='6'>
+<Attr>
+<Pos l='12' c='5' s='7'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='Success' typref='7'>
+<Attr>
+<Pos l='12' c='17' s='7'/>
+</Attr>
+</Id>
+<Id value='Failure_Ship_Already_Exists' typref='7'>
+<Attr>
+<Pos l='12' c='26' s='27'/>
+</Attr>
+</Id>
+<Id value='Failure_Max_Ships_Deployed' typref='7'>
+<Attr>
+<Pos l='12' c='55' s='26'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='GAME_STATES' typref='8'>
+<Attr>
+<Pos l='13' c='5' s='11'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='Ongoing' typref='9'>
+<Attr>
+<Pos l='13' c='21' s='7'/>
+</Attr>
+</Id>
+<Id value='Player_1_Win' typref='9'>
+<Attr>
+<Pos l='13' c='30' s='12'/>
+</Attr>
+</Id>
+<Id value='Player_2_Win' typref='9'>
+<Attr>
+<Pos l='13' c='44' s='12'/>
+</Attr>
+</Id>
+<Id value='Both_players_need_to_deploy_their_fleet' typref='9'>
+<Attr>
+<Pos l='13' c='58' s='39'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='SHOOTING_REPORT' typref='10'>
+<Attr>
+<Pos l='14' c='5' s='15'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='hit' typref='11'>
+<Attr>
+<Pos l='14' c='25' s='3'/>
+</Attr>
+</Id>
+<Id value='miss' typref='11'>
+<Attr>
+<Pos l='14' c='30' s='4'/>
+</Attr>
+</Id>
+<Id value='over' typref='11'>
+<Attr>
+<Pos l='14' c='36' s='4'/>
+</Attr>
+</Id>
+<Id value='Shot_Already_Taken' typref='11'>
+<Attr>
+<Pos l='14' c='42' s='18'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Constants>
+<Attr>
+<Pos l='16' c='1' s='18'/>
+</Attr>
+<Id value='grid' typref='12'>
+<Attr>
+<Pos l='17' c='5' s='4'/>
+</Attr>
+</Id>
+<Id value='num_of_battleships' typref='1'>
+<Attr>
+<Pos l='18' c='5' s='18'/>
+</Attr>
+</Id>
+</Concrete_Constants>
+<Properties>
+<Attr>
+<Pos l='20' c='1' s='10'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='21' c='10' s='1'/>
+</Attr>
+<Id value='grid' typref='12'>
+<Attr>
+<Pos l='21' c='5' s='4'/>
+</Attr>
+</Id>
+<Binary_Exp op='*s' typref='12'>
+<Attr>
+<Pos l='21' c='22' s='1'/>
+</Attr>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='21' c='15' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='1'>
+<Attr>
+<Pos l='21' c='14' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='10' typref='1'>
+<Attr>
+<Pos l='21' c='17' s='2'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='21' c='27' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='1'>
+<Attr>
+<Pos l='21' c='26' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='10' typref='1'>
+<Attr>
+<Pos l='21' c='29' s='2'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='22' c='24' s='1'/>
+</Attr>
+<Id value='num_of_battleships' typref='1'>
+<Attr>
+<Pos l='22' c='5' s='18'/>
+</Attr>
+</Id>
+<Id value='NAT1' typref='2'>
+<Attr>
+<Pos l='22' c='26' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='23' c='24' s='1'/>
+</Attr>
+<Id value='num_of_battleships' typref='1'>
+<Attr>
+<Pos l='23' c='5' s='18'/>
+</Attr>
+</Id>
+<Integer_Literal value='3' typref='1'>
+<Attr>
+<Pos l='23' c='26' s='1'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Unary_Exp op='POW'>
+<Id value='PLAYERS'/>
+</Unary_Exp>
+</Type>
+<Type id='5'>
+<Id value='PLAYERS'/>
+</Type>
+<Type id='6'>
+<Unary_Exp op='POW'>
+<Id value='MESSAGE'/>
+</Unary_Exp>
+</Type>
+<Type id='7'>
+<Id value='MESSAGE'/>
+</Type>
+<Type id='8'>
+<Unary_Exp op='POW'>
+<Id value='GAME_STATES'/>
+</Unary_Exp>
+</Type>
+<Type id='9'>
+<Id value='GAME_STATES'/>
+</Type>
+<Type id='10'>
+<Unary_Exp op='POW'>
+<Id value='SHOOTING_REPORT'/>
+</Unary_Exp>
+</Type>
+<Type id='11'>
+<Id value='SHOOTING_REPORT'/>
+</Type>
+<Type id='12'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>
